@@ -1,0 +1,74 @@
+Done with spreadsheet. The number of MPNs is 119
+Does the above look okay (Y/N)? y
+
+This is MPN # 1 / 119
+ The MPN is: 04023A101FAT2A
+
+DevTools listening on ws://127.0.0.1:50241/devtools/browser/d8f6a179-a6c0-4c9e-9a15-2c13f3c9b4de
+The webpage is: https://octopart.com/search?q=04023A101FAT2A&currency=USD&specs=0
+
+
+
+
+ Something went wrong. Fix it and press ENTER...
+
+
+
+[8604:17648:0805/135354.346:ERROR:device_event_log_impl.cc(214)] [13:53:54.346] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[8604:17648:0805/135354.348:ERROR:device_event_log_impl.cc(214)] [13:53:54.348] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+
+Traceback (most recent call last):
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\io\html.py", line 730, in _build_doc
+    r = parse(self.io, parser=parser)
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\lxml\html\__init__.py", line 939, in parse
+    return etree.parse(filename_or_url, parser, base_url=base_url, **kw)
+  File "src\lxml\etree.pyx", line 3521, in lxml.etree.parse
+  File "src\lxml\parser.pxi", line 1859, in lxml.etree._parseDocument
+  File "src\lxml\parser.pxi", line 1885, in lxml.etree._parseDocumentFromURL
+  File "src\lxml\parser.pxi", line 1789, in lxml.etree._parseDocFromFile
+  File "src\lxml\parser.pxi", line 1177, in lxml.etree._BaseParser._parseDocFromFile
+  File "src\lxml\parser.pxi", line 615, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\lxml\parser.pxi", line 725, in lxml.etree._handleParseResult
+  File "src\lxml\parser.pxi", line 652, in lxml.etree._raiseParseError
+OSError: Error reading file '': failed to load external entity ""
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\aaWork\aaFunProjects\Python Automation\OctoPart Price Import\Octo_grab_price.py", line 218, in <module>
+    df = pd.read_html(webpage)
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\util\_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\io\html.py", line 1098, in read_html
+    return _parse(
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\io\html.py", line 906, in _parse
+    tables = p.parse_tables()
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\io\html.py", line 222, in parse_tables
+    tables = self._parse_tables(self._build_doc(), self.match, self.attrs)
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\pandas\io\html.py", line 738, in _build_doc
+    r = fromstring(self.io, parser=parser)
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\lxml\html\__init__.py", line 875, in fromstring
+    doc = document_fromstring(html, parser=parser, base_url=base_url, **kw)
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\lxml\html\__init__.py", line 763, in document_fromstring
+    raise etree.ParserError(
+lxml.etree.ParserError: Document is empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\aaWork\aaFunProjects\Python Automation\OctoPart Price Import\Octo_grab_price.py", line 223, in <module>
+    driver.get(MPNurl)
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\e199416\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+
+
+
+------------------
+(program exited with code: 1)
+
+Press any key to continue . . .
